@@ -29,17 +29,13 @@ class TelaPython:#Parte grafica
                 x = linha.replace(' ','_').strip()
 
                 # Fatiamento das colunas em indices
-                divido = x[:6],x[8:19],x[25:57],x[77:84],x[84:116],x[117:122],x[132:141],x[142:152],x[181:]
+                divido = x[:6],x[8:19],x[25:57],x[76:85],x[85:116],x[117:122],x[132:141],x[142:152],x[181:]
                 
                 # Cabeçalho: Unidade, Irreg, Convênio, Razao, Código, Nome, Erro, BA, AT
                 fim = divido[8],divido[0],divido[1],divido[2],divido[3],divido[4],divido[5],divido[6],divido[7]
                 irreg = '|'.join(fim).replace('_',' ')
-                if '||' not in irreg:
-                    if '|Psp191|P' not in irreg:
-                        if 'Adm|' not in irreg:
-                            if '---|' not in irreg:
-                                if '|K    |' in irreg:
-                                    print(str(irreg.title()))
+                if '|K    |' in irreg:
+                    print(str(irreg.title()))
 
 tela = TelaPython()
 tela.Iniciar()
