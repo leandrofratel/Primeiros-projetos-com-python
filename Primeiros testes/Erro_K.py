@@ -26,16 +26,13 @@ class TelaPython:#Parte grafica
             print('Unidade|Irreg|Convênio|Razao|Código|Nome|Erro|BA|AT')
 
             for linha in linhas:
-                x = linha.replace(' ','_').strip()
-
-                # Fatiamento das colunas em indices
-                divido = x[:6],x[8:19],x[25:57],x[76:85],x[85:116],x[117:122],x[132:141],x[142:152],x[181:]
-                
-                # Cabeçalho: Unidade, Irreg, Convênio, Razao, Código, Nome, Erro, BA, AT
-                fim = divido[8],divido[0],divido[1],divido[2],divido[3],divido[4],divido[5],divido[6],divido[7]
-                irreg = '|'.join(fim).replace('_',' ')
-                if '|K    |' in irreg:
-                    print(str(irreg.title()))
+                if ' K    ' in linha:
+                    relatorio = linha[173:178], linha[:6], linha[8:18], 
+                    linha[25:57], linha[76:83], linha[84:111], linha[116:122], 
+                    linha[129:140], linha[141:151]
+                    
+                    novo_relatorio = '|'.join(relatorio)
+                    print(str(novo_relatorio.title()))
 
 tela = TelaPython()
 tela.Iniciar()
