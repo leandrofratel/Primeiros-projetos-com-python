@@ -1,0 +1,23 @@
+13.672.597/0001-62
+##.###.###/####-##
+
+============Nome das Colunas============
+ID_folha,
+Competencia,
+tipo_de_folha,
+ID,
+Razao_social,
+CNPJ,
+Bolsa,
+At,
+Total,
+Ajuste,
+Quant_Estg,
+CI,
+Extenso,
+Observação,
+Carta_fatura,
+N_recibo,
+Conta,
+RECIBO_SEM_CI,
+EXTENSO_SEM_CI
